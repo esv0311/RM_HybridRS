@@ -24,13 +24,16 @@ To train the performance of our recommendation models, we split our dataset into
 - Hybrid recommendation system by fitting both content-based and collaborative filtering algorithms 
 
 ## Evaluation of The Model and Results
-- Generating predictions and calculating RMSE and FCP values for the content-based model
+- **Generating predictions and calculating RMSE and FCP values for the content-based model**
+  
   The model's training RMSE of 0.9552 suggests it fits the training data quite well. The test RMSE, on the other hand, suggests a higher error level, with an RMSE of 1.1460. This may result from limitations in the content-based filtering approach, such as its reliance on movie attributes and the lack of user-item interactions. The model also obtained an FCP value of 0.590981 which indicates that the model only captures moderate concordance with user preferences when ranking the movie dataset based on the movie’s content similarities. In the testing set, the FCP value decreased to 0.440255, suggesting a lower ability to rank movies accurately for unseen user preferences.
-- Generating predictions and calculating RMSE and FCP values for the collaborative filtering model
+- **Generating predictions and calculating RMSE and FCP values for the collaborative filtering model**
+  
   The model’s training RMSE of 0.9006 shows that it effectively captures the underlying patterns in the training dataset with a relatively low inaccuracy. However, the test RMSE of 0.9446 suggests a slightly higher error level in predicting movies for unseen data, which could indicate a slight overfitting of the model to the training data. The model also obtained an FCP value of 0.733433 in the training data, indicating a higher level of concordance with user preferences than the CB model. In the testing set, the value slightly decreases to 0.701847, which implies that the model maintains relatively consistent ranking accuracy.
-- Generating predictions and calculating RMSE and FCP values for the hybrid model
+- **Generating predictions and calculating RMSE and FCP values for the hybrid model**
+  
   The training RMSE of 0.7801, which is the lowest among the three models, suggests a good fit of the hybrid model to the training data, indicating a low error level. A little higher than the training RMSE, the test RMSE of 0.9977 demonstrates a respectably accurate prediction performance on the unobserved data. This is further emphasized by the FCP value of 0.751256 in the training set, which surpasses both CB and CF models, and the FCP value of 0.641928 in the testing set, which strikes a balance between those 2 models. The hybrid model achieves a trade-off between the 2 individual models, delivering moderate ranking accuracy and concordance in unseen scenarios.
-- Plotting the RMSE and FCP values for the different models
+- **Plotting the RMSE and FCP values for the different models**
 
   ### RMSE Plot:
   ![RMSE Values by Models](https://github.com/esv0311/RM_HybridRS/blob/main/RMSEmodels.png?raw=true)
